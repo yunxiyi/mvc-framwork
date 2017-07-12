@@ -11,23 +11,23 @@ import org.apache.log4j.Logger;
  */
 public class DefaultClassAnnotationResolver implements ClassAnnotationResolver {
 
-	Logger logger = Logger.getLogger(DefaultClassAnnotationResolver.class);
+    Logger logger = Logger.getLogger(DefaultClassAnnotationResolver.class);
 
-	public BeanDefinition getBeanDefinition(String className) {
-		BeanDefinition beanDefinition = new DefaultBeanDefinition();
-		try {
-			ClassHelperUtils.getClass(className);
-			beanDefinition.setBeanClassName(className);
+    public BeanDefinition getBeanDefinition(String className) {
+        BeanDefinition beanDefinition = new DefaultBeanDefinition();
+        try {
+            ClassHelperUtils.getClass(className);
+            beanDefinition.setBeanClassName(className);
 
-			return beanDefinition;
-		} catch (ClassNotFoundException e) {
-			logger.error(e.getMessage(), e);
-			return null;
-		}
-	}
+            return beanDefinition;
+        } catch (ClassNotFoundException e) {
+            logger.error(e.getMessage(), e);
+            return null;
+        }
+    }
 
-	public BeanDefinition getBeanDefinition(Class clazz) {
-		return null;
-	}
+    public BeanDefinition getBeanDefinition(Class clazz) {
+        return null;
+    }
 
 }

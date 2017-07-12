@@ -4,27 +4,27 @@ package com.puhui.config;
  * Created by puhui on 2017/7/11.
  */
 public interface BeanDefinition {
-	String getParentName();
+    String getParentName();
 
-	void setParentName(String var1);
+    void setParentName(String var1);
 
-	String getBeanClassName();
+    String getBeanClassName();
 
-	void setBeanClassName(String var1);
+    void setBeanClassName(String var1);
 
-	String getScope();
+    String getScope();
 
-	void setScope(String var1);
+    void setScope(String var1);
 
-	String[] getDependsOn();
+    String[] getDependsOn();
 
-	void setDependsOn(String[] var1);
+    void setDependsOn(String[] var1);
 
-	boolean isSingleton();
+    boolean isSingleton();
 
-	boolean isPrototype();
+    boolean isPrototype();
 
-	<T> T getObject();
+    <T> T getObject();
 
-	<T> void setObject(T beanObject);
+    <T> void setObject(T beanObject);
 }

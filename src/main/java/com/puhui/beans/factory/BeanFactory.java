@@ -7,14 +7,14 @@ import com.puhui.exception.NotFoundBean;
  */
 public interface BeanFactory {
 
-	<T> T getBean(String name) throws NotFoundBean;
+    <T> T getBean(String name) throws NotFoundBean;
 
-	<T> T getBean(String name, Object... args) throws NotFoundBean;
+    <T> T getBean(String name, Object... args) throws NotFoundBean;
 
-	<T> T getBean(Class<T> clazz) throws NotFoundBean;
+    <T> T getBean(Class<T> clazz) throws NotFoundBean;
 
-	boolean isSingleton(String beanName) throws NotFoundBean;
+    boolean isSingleton(String beanName) throws NotFoundBean;
 
-	boolean isPrototype(String beanName) throws NotFoundBean;
+    boolean isPrototype(String beanName) throws NotFoundBean;
 
 }

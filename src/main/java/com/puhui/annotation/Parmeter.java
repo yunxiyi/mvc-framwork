@@ -11,7 +11,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Parmeter {
-	String name() default "";
-	String ref() default "";
-	String value() default "";
+    String name() default "";
+
+    String ref() default "";
+
+    String value() default "";
 }
